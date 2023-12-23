@@ -195,6 +195,7 @@ background-position: 60%;
   .services {
    margin-top:120px;
     padding:70px;
+      font-size:25px;
   }
   @media (min-width: 768px) {
     .services .services-container {
