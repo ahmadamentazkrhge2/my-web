@@ -143,4 +143,90 @@ body {
 }
 
 @keyframes fadeInUp {
-    0% {opacity: 0; transform: translate
+    0% {opacity: 0; transform: translateY(50px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* ============================= */
+/* Services Section */
+.height {
+    padding: 100px 20px 50px 20px;
+}
+
+.main-heading h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    background: linear-gradient(to right, var(--text), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.srv-box {
+    background: #1f1f2e;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.srv-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px var(--card-shadow);
+}
+
+.srv-box h3 {
+    margin-bottom: 15px;
+    color: var(--primary);
+    text-transform: capitalize;
+}
+
+.srv-box p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* ============================= */
+/* Footer / Contact Section */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+footer img {
+    width: 50px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* ============================= */
+/* Responsive */
+@media (max-width: 991px) {
+    .header ul.big {
+        display: none;
+    }
+
+    .links {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .container1 .shape .content p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
