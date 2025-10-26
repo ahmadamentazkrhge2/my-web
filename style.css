@@ -13,6 +13,11 @@
     --textcolor: #333;
 }
 
+/* --------- Smooth Scroll --------- */
+html {
+    scroll-behavior: smooth;
+}
+
 /* --------- Header --------- */
 .header {
     width: 100%;
@@ -102,7 +107,7 @@
 /* --------- Home Section --------- */
 .container1 {
     height: 100vh;
-    background: url('./landing.jpg') cover no-repeat;
+    background: url('background.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     justify-content: center;
@@ -121,15 +126,15 @@
 
 .container1 .shape .content p {
     position: relative;
-    color: white;
-    font-size: 30px;
+    color: #fff;
+    font-size: 24px;
     line-height: 1.8;
     z-index: 1;
 }
 
 /* --------- Services --------- */
 .height {
-    padding: 100px 50px 50px 50px;
+    padding: 120px 50px 50px 50px;
     background: var(--secondary);
 }
 
@@ -162,6 +167,7 @@
 .srv-box h3 {
     color: var(--maincolor);
     margin-bottom: 15px;
+    text-transform: capitalize;
 }
 
 .srv-box p {
@@ -201,6 +207,3 @@ footer a img:hover {
         padding: 15px 20px;
     }
 }
-
-
-
