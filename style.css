@@ -13,11 +13,6 @@
     --textcolor: #333;
 }
 
-/* --------- Smooth Scroll --------- */
-html {
-    scroll-behavior: smooth;
-}
-
 /* --------- Header --------- */
 .header {
     width: 100%;
@@ -134,7 +129,7 @@ html {
 
 /* --------- Services --------- */
 .height {
-    padding: 120px 50px 50px 50px;
+    padding: 100px 50px 50px 50px;
     background: var(--secondary);
 }
 
@@ -167,7 +162,6 @@ html {
 .srv-box h3 {
     color: var(--maincolor);
     margin-bottom: 15px;
-    text-transform: capitalize;
 }
 
 .srv-box p {
