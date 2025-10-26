@@ -2,11 +2,11 @@
 /* Variables & Reset */
 /* ============================= */
 :root {
-    --maincolor: #ff4b2b;
-    --secondarycolor: #ff416c;
-    --bgcolor: #f5f5f5;
-    --textcolor: #333;
-    --cardshadow: rgba(0, 0, 0, 0.1);
+    --primary: #ff6f61;      /* لون رئيسي */
+    --secondary: #ff9472;    /* لون ثانوي */
+    --bg: #fdf6f0;           /* خلفية الصفحة */
+    --text: #333;             /* لون النص */
+    --card-shadow: rgba(0, 0, 0, 0.1);
     --transition: 0.3s ease-in-out;
 }
 
@@ -19,8 +19,8 @@
 }
 
 body {
-    background-color: var(--bgcolor);
-    color: var(--textcolor);
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 /* ============================= */
@@ -31,18 +31,18 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, var(--maincolor), var(--secondarycolor));
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     padding: 15px 0;
     z-index: 1000;
-    box-shadow: 0 5px 15px var(--cardshadow);
+    box-shadow: 0 5px 15px var(--card-shadow);
 }
 
 .header .container {
     max-width: 1200px;
     margin: auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 0 20px;
 }
 
@@ -50,7 +50,6 @@ body {
     font-size: 35px;
     font-weight: bold;
     color: white;
-    cursor: pointer;
 }
 
 .header ul.big {
@@ -60,13 +59,13 @@ body {
 }
 
 .header ul.big li a {
+    color: white;
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
 }
 
 .header ul.big li a:hover {
-    color: #fff;
     text-shadow: 0 0 10px #fff;
 }
 
@@ -88,6 +87,7 @@ body {
     width: 100%;
     margin: 5px 0;
     background-color: white;
+    border-radius: 2px;
     transition: all 0.3s ease;
 }
 
@@ -95,7 +95,7 @@ body {
     position: absolute;
     top: 50px;
     right: 0;
-    background: linear-gradient(to right, var(--maincolor), var(--secondarycolor));
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     list-style: none;
     padding: 10px 20px;
     border-radius: 10px;
@@ -125,9 +125,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    background: linear-gradient(to right, #ff9472, #ff6f61);
     position: relative;
-    overflow: hidden;
     text-align: center;
     color: white;
     padding-top: 70px;
@@ -139,7 +138,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.2);
 }
 
 .shape .content p {
@@ -168,7 +167,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    background: linear-gradient(to right, var(--maincolor), var(--secondarycolor));
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -185,18 +184,18 @@ body {
     background: white;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px var(--cardshadow);
+    box-shadow: 0 8px 20px var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .srv-box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px var(--cardshadow);
+    box-shadow: 0 15px 30px var(--card-shadow);
 }
 
 .srv-box h3 {
     margin-bottom: 15px;
-    color: var(--maincolor);
+    color: var(--primary);
     text-transform: capitalize;
 }
 
@@ -211,7 +210,7 @@ body {
 footer {
     text-align: center;
     padding: 50px 0;
-    background: linear-gradient(to right, var(--maincolor), var(--secondarycolor));
+    background: linear-gradient(to right, var(--primary), var(--secondary));
 }
 
 footer img {
