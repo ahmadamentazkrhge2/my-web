@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth; /* الانتقال السلس عند الضغط على الروابط */
   transition: all 0.3s ease;
 }
 
@@ -36,31 +37,56 @@ body {
 .header .logo {
   font-size: 35px;
   font-weight: bold;
-  color: var(--maincolor, #4CAF50);
+  color: #4CAF50;
 }
 
 /* Navigation */
 .header ul.big {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .header ul.big li a {
   color: black;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .header ul.big li a:hover {
-  color: #4CAF50;
-  transform: scale(1.05);
+  color: #fff;
+  background-color: #4CAF50;
 }
 
 /* Mobile Links */
 .links ul {
   display: none;
+  list-style: none;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.links ul.show {
+  display: flex;
+}
+
+.links ul li a {
+  padding: 10px 20px;
+  display: block;
+  color: black;
+}
+
+.links ul li a:hover {
+  background-color: #4CAF50;
+  color: #fff;
 }
 
 .links .icon {
@@ -75,6 +101,7 @@ body {
   background-color: black;
   margin: 4px 0;
   display: block;
+  border-radius: 2px;
 }
 
 /* ============================= */
@@ -86,8 +113,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
+  text-align: center;
 }
 
 .container1 .overlay {
@@ -103,7 +131,6 @@ body {
   position: relative;
   z-index: 1;
   font-size: 1.5rem;
-  text-align: center;
 }
 
 /* ============================= */
@@ -133,7 +160,6 @@ body {
   border-radius: 10px;
   width: 250px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .srv-box:hover {
