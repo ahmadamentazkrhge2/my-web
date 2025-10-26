@@ -1,65 +1,76 @@
-/* --------- Reset --------- */
+/* ============================= */
+/* Variables & Reset */
+/* ============================= */
+:root {
+    --maincolor: #ff4b2b;
+    --secondarycolor: #ff416c;
+    --bgcolor: #f5f5f5;
+    --textcolor: #333;
+    --cardshadow: rgba(0, 0, 0, 0.1);
+    --transition: 0.3s ease-in-out;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-/* --------- Variables --------- */
-:root {
-    --maincolor: #3498db;
-    --secondary: #f4f4f4;
-    --textcolor: #333;
-}
-
-/* --------- Smooth Scroll --------- */
-html {
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
-/* --------- Header --------- */
+body {
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+}
+
+/* ============================= */
+/* Header */
+/* ============================= */
 .header {
     width: 100%;
-    background: #fff;
     position: fixed;
     top: 0;
     left: 0;
+    background: linear-gradient(to right, var(--maincolor), var(--secondarycolor));
+    padding: 15px 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px var(--cardshadow);
 }
 
 .header .container {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-.header .logo {
+.logo {
     font-size: 35px;
     font-weight: bold;
-    color: var(--maincolor);
+    color: white;
+    cursor: pointer;
 }
 
 .header ul.big {
-    list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 25px;
+    list-style: none;
 }
 
 .header ul.big li a {
     text-decoration: none;
-    color: var(--textcolor);
     font-weight: 500;
-    transition: color 0.3s;
+    transition: var(--transition);
 }
 
 .header ul.big li a:hover {
-    color: var(--maincolor);
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
 }
 
-/* --------- Mobile Menu --------- */
+/* Mobile menu */
 .links {
     display: none;
     position: relative;
@@ -67,32 +78,33 @@ html {
 
 .links .icon {
     display: block;
+    width: 30px;
     cursor: pointer;
-    width: 25px;
 }
 
 .links .icon span {
     display: block;
     height: 3px;
-    background: var(--textcolor);
+    width: 100%;
     margin: 5px 0;
-    transition: 0.3s;
+    background-color: white;
+    transition: all 0.3s ease;
 }
 
 .links ul {
-    display: none;
     position: absolute;
-    top: 40px;
+    top: 50px;
     right: 0;
-    background: #fff;
+    background: linear-gradient(to right, var(--maincolor), var(--secondarycolor));
     list-style: none;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
 }
 
 .links ul.show {
-    display: block;
+    display: flex;
 }
 
 .links ul li {
@@ -100,19 +112,25 @@ html {
 }
 
 .links ul li a {
+    color: white;
     text-decoration: none;
-    color: var(--textcolor);
+    font-weight: 500;
 }
 
-/* --------- Home Section --------- */
+/* ============================= */
+/* Hero Section */
+/* ============================= */
 .container1 {
     height: 100vh;
-    background: url('background.jpg') center/cover no-repeat;
-    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    position: relative;
+    overflow: hidden;
     text-align: center;
+    color: white;
+    padding-top: 70px;
 }
 
 .container1 .overlay {
@@ -121,80 +139,94 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.3);
 }
 
-.container1 .shape .content p {
+.shape .content p {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    max-width: 600px;
+    margin: auto;
     position: relative;
-    color: #fff;
-    font-size: 24px;
-    line-height: 1.8;
     z-index: 1;
+    animation: fadeInUp 1.5s ease forwards;
 }
 
-/* --------- Services --------- */
+@keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(50px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* ============================= */
+/* Services Section */
+/* ============================= */
 .height {
-    padding: 120px 50px 50px 50px;
-    background: var(--secondary);
+    padding: 100px 20px 50px 20px;
 }
 
 .main-heading h2 {
     text-align: center;
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-bottom: 50px;
-    color: var(--maincolor);
+    background: linear-gradient(to right, var(--maincolor), var(--secondarycolor));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .srv-box {
-    background: #fff;
+    background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px var(--cardshadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .srv-box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 30px var(--cardshadow);
 }
 
 .srv-box h3 {
-    color: var(--maincolor);
     margin-bottom: 15px;
+    color: var(--maincolor);
     text-transform: capitalize;
 }
 
 .srv-box p {
-    color: #555;
     line-height: 1.6;
+    color: #555;
 }
 
-/* --------- Footer --------- */
+/* ============================= */
+/* Footer / Contact Section */
+/* ============================= */
 footer {
-    background: #333;
-    padding: 20px;
     text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(to right, var(--maincolor), var(--secondarycolor));
 }
 
-footer a img {
-    width: 40px;
+footer img {
+    width: 50px;
     margin: 0 10px;
-    filter: brightness(0) invert(1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
-footer a img:hover {
-    transform: scale(1.2);
+footer img:hover {
+    transform: scale(1.2) rotate(10deg);
 }
 
-/* --------- Responsive --------- */
-@media (max-width: 768px) {
+/* ============================= */
+/* Responsive */
+@media (max-width: 991px) {
     .header ul.big {
         display: none;
     }
@@ -202,8 +234,11 @@ footer a img:hover {
     .links {
         display: block;
     }
+}
 
-    .container {
-        padding: 15px 20px;
+@media (max-width: 768px) {
+    .container1 .shape .content p {
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
 }
