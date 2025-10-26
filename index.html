@@ -1,126 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-
-
-    <title>Ahmad</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- start header  -->
-
-    <div class="header">
-      <div class="container">
-          <div calss="logo" style="padding:10px;font-size:35px;color:var(--maincolor);font-weight: bold;">Ahmad</div>
-          <ul class="big">
-          <li><a style="color:black;" href="#Home">Home</a></li>
-          
-          <li><a style="color:black" href="#Services">Services</a></li>
-          <li><a style="color:black" href="#Contact">Contact</a></li>
+  <!-- start header -->
+  <div class="header">
+    <div class="container">
+      <div class="logo">Ahmad</div>
+      <ul class="big">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+      <div class="links">
+        <span class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Services">Services</a></li>
+          <li><a href="#Contact">Contact</a></li>
         </ul>
+      </div> 
+    </div>
+  </div>
+  <!-- end header -->
 
-
-          <div class="links">
-
-           <span class="icon">
-              <span></span>
-              <span></span>
-              <span></span>
-           </span>
-           <ul>
-            <li><a href="#Home">Home</a></li>
-              <li><a href="#Services">Services</a></li>
-              <li><a href="#Contact">contact</a></li>
-           </ul>
-           </div> 
+  <!-- start home -->
+  <div id="Home" class="container1">
+    <div class="overlay"></div>
+    <div class="shape">
+      <div class="content">
+        <p>My name is Ahmad.<br> I live in Aleppo.<br> I am studying Informatics Engineering.</p>
       </div>
+    </div>
   </div>
-<!-- end header -->
+  <!-- end home -->
 
-
-<!-- start home -->
-<div id="Home" class="container1">
-<div class="overlay"></div>
-<div class="shape">
-    <div calss="content">
-    <p>My name is Ahmad .<br> I live in Aleppo .<br> I am studying Informatics Engineering . </p>
-</div>   
-</div>
-</div>
-<!-- end home -->
-<!-- start services -->
-<div class="height">
-<div class="main-heading">
-    <h2>Services</h2>
- 
-  </div>
-
-  <div id="Services" class="services">
-    <div class="container3">
-    
-      <div class="services-container">
-        <div class="srv-box">
-    
-          <div class="text">
-            <h3>web development</h3>
-            <p>
-             Web development refers to the creating, building, and maintaining of websites. It includes aspects such as web design, web publishing, web programming, and database management. It is the creation of an application that works over the internet i.e. websites.
-            </p>
+  <!-- start services -->
+  <div class="height">
+    <div class="main-heading">
+      <h2>Services</h2>
+    </div>
+    <div id="Services" class="services">
+      <div class="container3">
+        <div class="services-container">
+          <div class="srv-box">
+            <div class="text">
+              <h3>Web Development</h3>
+              <p>Web development refers to the creating, building, and maintaining of websites. It includes web design, web programming, and database management.</p>
+            </div>
           </div>
-        </div>
-        <div class="srv-box">
-       
-          <div class="text">
-            <h3>graphic design</h3>
-            <p>
-                Graphic design is “the art and practice of planning and projecting ideas and experiences with visual and textual content,
-            </p>
+          <div class="srv-box">
+            <div class="text">
+              <h3>Graphic Design</h3>
+              <p>Graphic design is the art and practice of planning and projecting ideas with visual and textual content.</p>
+            </div>
           </div>
-        </div>
-        <div class="srv-box">
-        
-          <div class="text">
-            <h3>Edit videos</h3>
-            <p>
-                Video editing is the post-production and arrangement of video shots. To showcase perfect video editing to the public, video editors must be reasonable and ensure they have a superior understanding of film, television, and other sorts of videography
-            </p>
+          <div class="srv-box">
+            <div class="text">
+              <h3>Video Editing</h3>
+              <p>Video editing is the post-production and arrangement of video shots for films, TV, or online content.</p>
+            </div>
           </div>
-        </div>
-        <div class="srv-box">
-     
-          <div class="text">
-            <h3>Mobile app development
-            </h3>
-            <p>
-                Mobile app development is the act or process by which a mobile app is developed for one or more mobile devices, which can include personal digital assistants 
-            </p>
+          <div class="srv-box">
+            <div class="text">
+              <h3>Mobile App Development</h3>
+              <p>Mobile app development is the process of creating apps for mobile devices, including smartphones and tablets.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<br>
-<!-- end services -->
-<!-- start contact  -->
-<footer id="Contact">
-<a  href="https://www.facebook.com/ahmadamen.tazkrhge.9"><img class="facebook" src="facepng.png"></a>
-<a  href="https://www.instagram.com/ahmad_amen_tazkrhge/?hl=ar"><img class="insta" src="inst2apng.png"></a>
-</footer>
+  <!-- end services -->
 
-<!-- end contact  -->
-    <script>
-  const icon = document.querySelector('.links .icon');
-  const mobileMenu = document.querySelector('.links ul');
+  <!-- start contact -->
+  <footer id="Contact">
+    <a href="https://www.facebook.com/ahmadamen.tazkrhge.9"><img class="facebook" src="facepng.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/ahmad_amen_tazkrhge/?hl=ar"><img class="insta" src="inst2apng.png" alt="Instagram"></a>
+  </footer>
+  <!-- end contact -->
 
-  icon.addEventListener('click', () => {
-    mobileMenu.classList.toggle('show');
-  });
-</script>
+  <script>
+    const icon = document.querySelector('.links .icon');
+    const mobileMenu = document.querySelector('.links ul');
+    icon.addEventListener('click', () => {
+      mobileMenu.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
-
