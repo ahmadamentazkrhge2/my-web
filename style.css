@@ -5,14 +5,17 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
-html{
- scroll-behavior: smooth;
-}
+
 /* --------- Variables --------- */
 :root {
     --maincolor: #3498db;
     --secondary: #f4f4f4;
     --textcolor: #333;
+}
+
+/* --------- Smooth Scroll --------- */
+html {
+    scroll-behavior: smooth;
 }
 
 /* --------- Header --------- */
@@ -123,15 +126,15 @@ html{
 
 .container1 .shape .content p {
     position: relative;
-    color: white;
-    font-size: 30px;
+    color: #fff;
+    font-size: 24px;
     line-height: 1.8;
     z-index: 1;
 }
 
 /* --------- Services --------- */
 .height {
-    padding: 100px 50px 50px 50px;
+    padding: 120px 50px 50px 50px;
     background: var(--secondary);
 }
 
@@ -164,6 +167,7 @@ html{
 .srv-box h3 {
     color: var(--maincolor);
     margin-bottom: 15px;
+    text-transform: capitalize;
 }
 
 .srv-box p {
@@ -203,4 +207,3 @@ footer a img:hover {
         padding: 15px 20px;
     }
 }
-
