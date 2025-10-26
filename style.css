@@ -123,8 +123,8 @@ html{
 
 .container1 .shape .content p {
     position: relative;
-    color: #fff;
-    font-size: 24px;
+    color: white;
+    font-size: 30px;
     line-height: 1.8;
     z-index: 1;
 }
@@ -203,3 +203,4 @@ footer a img:hover {
         padding: 15px 20px;
     }
 }
+
