@@ -95,8 +95,20 @@
     icon.addEventListener('click', () => {
       mobileMenu.classList.toggle('show');
     });
+    window.addEventListener("scroll", () => {
+  const boxes = document.querySelectorAll(".srv-box");
+  const triggerBottom = window.innerHeight * 0.85;
+
+  boxes.forEach(box => {
+    const boxTop = box.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      box.classList.add("show");
+    }
+  });
+});
   </script>
 </body>
 </html>
+
 
 
