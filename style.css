@@ -188,11 +188,12 @@ body {
   background: var(--cardbg);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 5px 20px var(--cardshadow);
-  transform: translateY(40px);
-  opacity: 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(0);
+  opacity: 1;
   transition: transform var(--transition), opacity var(--transition);
 }
+
 
 .srv-box.show {
   transform: translateY(0);
@@ -302,4 +303,5 @@ footer img:hover {
   from { transform: translateY(40px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
 
